@@ -1,0 +1,59 @@
+21s+1       1
+.......*.........
+31s+1      29s+1 
+Te-perioada de esantionare;
+T1=21;
+T2=31;
+T3=29;
+C1=Te/Te+T2;
+C2=T1/Te+T2;
+C2=Te/Te+T3;
+-----------------------------------------
+plotare intrarea t1 egala cu iesirea t1_1+c1*(intrare t1 - iesire t1_1)+c2*intrare t1 iesire t1_1
+	InT1=semnal_treapta;
+		    	IeT1=IeT1_1+C1*(InT1-IeT1_1)+C2*(InT1-IeT1_1);
+				InT2= IeT1;
+				IeT2=IeT2_1+C3*(InT2-IeT2_1);
+treapta
+----------------------------------------
+plotare
+InT1=semnal_rampa;
+		    	IeT1=IeT1_1+C1*(InT1-IeT1_1)+C2*(InT1-IeT1_1);
+				InT2= IeT1;
+				IeT2=IeT2_1+C3*(InT2-IeT2_1);
+rampa
+--------------------------------------------------------------------
+plotare
+InT1=semnal_sinusoidal;
+
+		    	IeT1=IeT1_1+C1*(InT1-IeT1_1)+C2*(InT1-IeT1_1);
+				InT2= IeT1;
+				IeT2=IeT2_1+C3*(InT2-IeT2_1);
+sinusoidal
+---------------------------------------------------------------------------
+
+
+------------------------------------------
+avem nevoie de :
+
+1-fdt 
+2-toate cele 3 ce avem de facut
+3-raspuns fdt
+4-semnal intarziat
+butoane selectie pt sinusoida:
+a-amplituidine
+t-perioada
+te-perioada esantionare
+t0-perioada intarziere
+3butoane mari:
+1-start
+2-refresh
+3-quit
+rampa :
+ap-panta semnalului
+timer-ul pe final
+inca 3 butoane mici pt fiecare semnal
+in functie de fiecare semnal vom activa/dezactiva(aparea) clockurile
+
+
+---------------------------
